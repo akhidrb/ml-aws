@@ -12,8 +12,8 @@ client = boto3.client('comprehend')
 # Complete the call to batch_detect_sentiment
 #####
 response = client.batch_detect_sentiment(
-#     ???
-#     ???
+    TextList=all_notes,
+    LanguageCode='en'
 )
 
 for result in response["ResultList"]:
